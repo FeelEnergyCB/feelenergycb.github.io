@@ -776,6 +776,9 @@ ul {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
+.tags__text-in {
+  opacity: 0;
+}
 .tags__text {
   display: block;
   position: relative;
@@ -783,7 +786,6 @@ ul {
           transition: inherit;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  text-indent: -9999px;
   padding: 3px 6px;
 }
 .tags__text:before,

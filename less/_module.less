@@ -1,4 +1,4 @@
-// Animations
+// animations
 @keyframes init {
   0% {
     opacity: 0;
@@ -66,6 +66,7 @@
     color: @color-white;
   }
 }
+// end animations
 
 .wrapper {
   min-height: 100%;
@@ -261,17 +262,18 @@
     &:hover,
     &_hover {
       .tags__text {
-        //transform: rotateY(180deg);
         transform: rotateY(180deg);
       }
     }
+  }
+  &__text-in {
+    opacity: 0;
   }
   &__text {
     display: block;
     position: relative;
     transition: inherit;
     transform-style: preserve-3d;
-    text-indent: -9999px;
     padding: 3px 6px;
 
     &:before,
