@@ -879,8 +879,14 @@ ul {
 .contacts__item {
   font-size: 18px;
   line-height: 1;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .contacts__link {
   margin: 0 5px;
+}
+.contacts__row {
+  margin-bottom: 20px;
+}
+.contacts__row:last-child {
+  margin-bottom: 0;
 }
