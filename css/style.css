@@ -730,7 +730,7 @@ ul {
   padding: 0;
   display: block;
   text-align: left;
-  margin: 0 -5px;
+  margin: 0;
 }
 .tags:before,
 .tags:after {
@@ -807,7 +807,7 @@ ul {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 .projects {
-  padding: 0 5px;
+  padding: 0;
 }
 .projects__item {
   position: relative;
@@ -880,4 +880,7 @@ ul {
   font-size: 18px;
   line-height: 1;
   margin-bottom: 20px;
+}
+.contacts__link {
+  margin: 0 5px;
 }
