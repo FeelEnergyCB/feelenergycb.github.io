@@ -570,6 +570,8 @@ ul {
 .avatar {
   -webkit-transition: -webkit-transform 0.4s ease-out;
           transition: transform 0.4s ease-out;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   cursor: pointer;
   -webkit-animation: avatar-back 0.75s forwards;
           animation: avatar-back 0.75s forwards;
@@ -584,9 +586,8 @@ ul {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .avatar_active {
-  -webkit-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-          transform: rotate(360deg);
+  -webkit-transform: rotate(360deg) translate3d(0, 0, 0);
+          transform: rotate(360deg) translate3d(0, 0, 0);
 }
 .avatar__pic {
   width: 100%;
@@ -612,6 +613,8 @@ ul {
   -webkit-animation: title-back 0.75s forwards;
           animation: title-back 0.75s forwards;
   color: #ffffff;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 @media (max-width: 1100px) {
   .title {

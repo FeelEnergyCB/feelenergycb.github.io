@@ -98,6 +98,7 @@
 
 .avatar {
   .tr(transform, .4s);
+  transform: translate3d(0,0,0);
   cursor: pointer;
   animation: avatar-back @animation-time forwards;
   position: absolute;
@@ -112,7 +113,7 @@
               0 3px 6px rgba(0,0,0,.23);
 
   &_active {
-    transform: rotate(360deg);
+    transform: rotate(360deg) translate3d(0,0,0);
   }
   &__pic {
     width: 100%;
@@ -136,6 +137,7 @@
   margin: -135px 0 30px 0;
   animation: title-back @animation-time forwards;
   color: @color-white;
+  transform: translate3d(0,0,0);
 
   .max(@desktop-md, {
     .fz(36, 1.5);
