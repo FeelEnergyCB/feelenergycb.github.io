@@ -885,8 +885,8 @@ ul {
   margin: 0 5px;
 }
 .contacts__row {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 .contacts__row:last-child {
-  margin-bottom: 0;
+  padding-bottom: 0;
 }
