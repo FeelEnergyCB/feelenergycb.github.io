@@ -573,12 +573,12 @@ ul {
   width: 0px;
   height: 0px;
   border-style: solid;
-  border-width: 0 22px 22px 0;
+  border-width: 0 23px 23px 0;
   border-color: transparent #9013fe transparent transparent;
   content: '';
   position: absolute;
-  top: -2px;
-  right: -2px;
+  top: -3px;
+  right: -3px;
 }
 .wrapper__in:after {
   -webkit-transition: all 0.2s ease-out;
@@ -586,7 +586,7 @@ ul {
   width: 0px;
   height: 0px;
   border-style: solid;
-  border-width: 18px 0 0 18px;
+  border-width: 17px 0 0 17px;
   border-color: transparent transparent transparent #ffffff;
   content: '';
   position: absolute;
