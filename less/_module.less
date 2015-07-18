@@ -91,6 +91,24 @@
     background: @color-white;
     box-shadow: 0 1px 3px rgba(0,0,0,.12),
                 0 1px 2px rgba(0,0,0,.24);
+
+    &:before {
+      .arrow(22, 22, @color-main, top-right);
+      content: '';
+      position: absolute;
+      top: -2px;
+      right: -2px;
+    }
+    &:after {
+      .tr(all, .2s);
+      .arrow(18, 18, @color-white, bottom-left);
+      content: '';
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      box-shadow: -1px 1px 1px rgba(0,0,0,.12),
+                  -2px 1px 2px rgba(0,0,0,.24);
+    }
   }
 } // end wrapper
 
