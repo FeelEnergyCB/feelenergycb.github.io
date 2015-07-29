@@ -210,9 +210,9 @@
 .info {
   .clearfix();
   font-family: @font-second;
-  margin: 0 0 40px;
+  margin: 0 0 30px;
 
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   border-bottom: 1px dashed @color-black;
   &:last-child {
     border-bottom: none;
@@ -292,6 +292,12 @@
       }
     }
   }
+  &__more {
+    padding: 3px 6px;
+    color: @color-black;
+    vertical-align: top;
+    display: block;
+  }
   &__text-in {
     opacity: 0;
   }
@@ -301,6 +307,7 @@
     transition: inherit;
     transform-style: preserve-3d;
     padding: 3px 6px;
+    color: inherit;
 
     &:before,
     &:after {
@@ -313,6 +320,12 @@
       left: 0;
       width: 100%;
       height: 100%;
+      text-align: center;
+    }
+    .tags_projects & {
+      &:after {
+        content: attr(data-next-text);
+      }
     }
     &:before {
       z-index: 2;

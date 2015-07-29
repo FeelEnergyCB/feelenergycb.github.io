@@ -71,6 +71,18 @@ input[type=button] {
 }
 
 @media print {
-
+  .avatar {
+    left: 0 !important;
+    transform: none !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+  .wrapper__in {
+    &:before,
+    &:after {
+      display: none !important;
+    }
+  }
 }
 
