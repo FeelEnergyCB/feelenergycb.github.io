@@ -887,10 +887,31 @@ ul {
 .projects {
   padding: 0;
 }
+.projects:before,
+.projects:after {
+  content: "";
+  display: table;
+}
+.projects:after {
+  clear: both;
+}
 .projects__item {
   position: relative;
   display: block;
   margin: 0 5px 20px;
+  float: left;
+  width: 30%;
+}
+@media (max-width: 768px) {
+  .projects__item {
+    width: 100%;
+  }
+}
+.projects__link {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
 }
 .projects__link:hover + .projects__tips {
   -webkit-transform: scale(1);
