@@ -641,7 +641,6 @@ ul {
   overflow: hidden;
   z-index: 10;
   pointer-events: all;
-  border: 5px solid #ffffff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .avatar.avatar_active {
@@ -650,10 +649,12 @@ ul {
           transform: rotate(20deg);
 }
 .avatar__pic {
+  border: 5px solid #ffffff;
   width: 100%;
   height: 100%;
   display: block;
   border-radius: 50%;
+  background: #ffffff;
 }
 .avatar__wrapper {
   position: absolute;
