@@ -434,12 +434,18 @@ ul {
   0% {
     opacity: 0;
   }
+  75% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
   }
 }
 @keyframes init {
   0% {
+    opacity: 0;
+  }
+  75% {
     opacity: 0;
   }
   100% {
@@ -572,8 +578,8 @@ ul {
   border-top: 1px solid;
   overflow: hidden;
   opacity: 0;
-  -webkit-animation: init 1s forwards .5s;
-          animation: init 1s forwards .5s;
+  -webkit-animation: init 1.5s forwards;
+          animation: init 1.5s forwards;
 }
 .wrapper:before {
   content: '';
