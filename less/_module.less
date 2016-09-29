@@ -447,3 +447,17 @@
     }
   }
 } // end contacts
+
+.carousel {
+  white-space: nowrap;
+  margin-top: 20px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  .max(@mobile-lg, {
+    display: none;
+  });
+  &__item {
+    display: inline-block;
+    width: 100%;
+  }
+} // end carousel
