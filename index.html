@@ -373,6 +373,8 @@
 
       </div> <!-- end main -->
     </div> <!-- end wrapper -->
+      
+      <iframe src="https://codepen.io/api/oembed?url=https://codepen.io/MikitaLisavets/pen/PZqPZE"></iframe>
 
     <script>
       var codepenUrls = ['PZqPZE', 'jWbgOJ', 'jWExyq', 'eJGpQx', 'NxyVZJ', 'adOzra', 'eJWyqy', 'YwWeaj', 'OMNJPN', 'JGogQe']
@@ -383,7 +385,7 @@
             currentElement;
 
         while(index--) {
-          ajax('https://crossorigin.me/http://codepen.io/api/oembed?url=https://codepen.io/MikitaLisavets/pen/' + codepenUrls[index]  + '&format=json&height=600', function(response) {
+          ajax('http://codepen.io/api/oembed?url=https://codepen.io/MikitaLisavets/pen/' + codepenUrls[index]  + '&format=json&height=600', function(response) {
             currentElement = document.createElement("DIV");
             currentElement.className = 'carousel__item';
             currentElement.innerHTML = response.html;
