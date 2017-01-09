@@ -39,6 +39,45 @@
           <span class="title__item title__item_last">and i'm a Front-end developer</span>
         </h1>
         <div class="info-wrapper">
+            
+          <div class="info">
+            <div class="info__title">
+              <h2 class="sub-title">My info:</h2>
+
+            </div>
+            <div class="info__content">
+              <p class="info__text">
+                I'm interested in electronic engineering, music and web.
+                And I have more than 3 years of experience in commercial web development.
+                During this time I've solved a lot of problems with the help of html and javascript.
+              </p>
+            </div> <!-- end info__content -->
+          </div> <!-- end info -->
+
+          <div class="info">
+            <div class="info__title">
+              <h2 class="sub-title">My career:</h2>
+
+            </div>
+            <div class="info__content">
+              <p class="info__text">
+                studied for 5 years in belarusian state university of informatics and radioelectronics
+                <br/>
+                <br/>
+                1.5 year work experience as a freelance front-end developer
+                <br/>
+                <br/>
+                1 year work experience as a software engineer at «j-Lab»
+                <br/>
+                <br/>
+                1 year work experience as a front-end developer at «liveHTML»
+                <br/>
+                <br/>
+                1.5 year work experience as a front-end developer at «iFuture»
+              </p>
+            </div> <!-- end info__content -->
+          </div> <!-- end info -->            
+            
           <div class="info">
             <div class="info__title">
               <h2 class="sub-title">My skills:</h2>
@@ -145,21 +184,6 @@
             </div> <!-- end info__content -->
           </div> <!-- end info -->
 
-
-          <div class="info">
-            <div class="info__title">
-              <h2 class="sub-title">My info:</h2>
-
-            </div>
-            <div class="info__content">
-              <p class="info__text">
-                I'm interested in electronic engineering, music and web.
-                And I have more than 3 years of experience in commercial web development.
-                During this time I've solved a lot of problems with the help of html and javascript.
-              </p>
-            </div> <!-- end info__content -->
-          </div> <!-- end info -->
-
           <div class="info">
             <div class="info__title">
               <h2 class="sub-title">My projects:</h2>
@@ -204,6 +228,10 @@
                   </p>
                 </li>
               </ul> <!-- end projects -->
+            </div> <!-- end info__content -->
+            <div class="info__content">
+              <div class="carousel" id="carousel">
+              </div> <!-- end carousel -->
             </div> <!-- end info__content -->
           </div> <!-- end info -->
 
@@ -253,31 +281,6 @@
                 </li>
 
               </ul>
-            </div> <!-- end info__content -->
-            <div class="info__content">
-              <div class="carousel" id="carousel">
-              </div> <!-- end carousel -->
-            </div> <!-- end info__content -->
-          </div> <!-- end info -->
-
-          <div class="info">
-            <div class="info__title">
-              <h2 class="sub-title">My career:</h2>
-
-            </div>
-            <div class="info__content">
-              <p class="info__text">
-                studied for 5 years in belarusian state university of informatics and radioelectronics
-                <br/>
-                <br/>
-                1.5 year work experience as a freelance front-end developer
-                <br/>
-                <br/>
-                1 year work experience as a software engineer in «j-Lab» company
-                <br/>
-                <br/>
-                1 year work experience as a front-end developer in «liveHTML» company
-              </p>
             </div> <!-- end info__content -->
           </div> <!-- end info -->
 
@@ -380,7 +383,7 @@
             currentElement;
 
         while(index--) {
-          ajax('http://crossorigin.me/http://codepen.io/api/oembed?url=https://codepen.io/MikitaLisavets/pen/' + codepenUrls[index]  + '&format=json&height=600', function(response) {
+          ajax('http://codepen.io/api/oembed?url=https://codepen.io/MikitaLisavets/pen/' + codepenUrls[index]  + '&format=json&height=600', function(response) {
             currentElement = document.createElement("DIV");
             currentElement.className = 'carousel__item';
             currentElement.innerHTML = response.html;
