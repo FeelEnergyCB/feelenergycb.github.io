@@ -383,7 +383,7 @@
             currentElement;
 
         while(index--) {
-          ajax('http://codepen.io/api/oembed?url=https://codepen.io/MikitaLisavets/pen/' + codepenUrls[index]  + '&format=json&height=600', function(response) {
+          ajax('https://crossorigin.me/http://codepen.io/api/oembed?url=https://codepen.io/MikitaLisavets/pen/' + codepenUrls[index]  + '&format=json&height=600', function(response) {
             currentElement = document.createElement("DIV");
             currentElement.className = 'carousel__item';
             currentElement.innerHTML = response.html;
@@ -395,6 +395,7 @@
 
       function ajax(url, cb, ecb) {
         var request = new XMLHttpRequest();
+        request.withCredentials = true;
         request.open('GET', url, true);
         request.onload = function() {
           if (request.status >= 200 && request.status < 400) {
