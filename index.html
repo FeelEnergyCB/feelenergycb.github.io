@@ -232,12 +232,35 @@
             <div class="info__content">
               <div class="carousel" id="carousel">
                   <div class="carousel__item">
-                    <iframe src="https://codepen.io/MikitaLisavets/full/PZqPZE"></iframe>
+                    <iframe src="https://codepen.io/MikitaLisavets/full/PZqPZE" height="600"></iframe>
+                  </div>
+                  <div class="carousel__item">
+                    <iframe src="https://codepen.io/MikitaLisavets/full/jWbgOJ" height="600"></iframe>
+                  </div>
+                  <div class="carousel__item">
+                    <iframe src="https://codepen.io/MikitaLisavets/full/eJGpQx" height="600"></iframe>
+                  </div>
+                  <div class="carousel__item">
+                    <iframe src="https://codepen.io/MikitaLisavets/full/NxyVZJ" height="600"></iframe>
+                  </div>
+                  <div class="carousel__item">
+                    <iframe src="https://codepen.io/MikitaLisavets/full/adOzra" height="600"></iframe>
+                  </div>
+                  <div class="carousel__item">
+                    <iframe src="https://codepen.io/MikitaLisavets/full/eJWyqy" height="600"></iframe>
+                  </div>
+                  <div class="carousel__item">
+                    <iframe src="https://codepen.io/MikitaLisavets/full/YwWeaj" height="600"></iframe>
+                  </div>
+                  <div class="carousel__item">
+                    <iframe src="https://codepen.io/MikitaLisavets/full/OMNJPN" height="600"></iframe>
+                  </div>
+                  <div class="carousel__item">
+                    <iframe src="https://codepen.io/MikitaLisavets/full/JGogQe" height="600"></iframe>
                   </div>
               </div> <!-- end carousel -->
             </div> <!-- end info__content -->
           </div> <!-- end info -->
-
           <div class="info">
             <div class="info__title">
               <h2 class="sub-title">My works:</h2>
@@ -378,41 +401,6 @@
     </div> <!-- end wrapper -->
 
     <script>
-      var codepenUrls = ['PZqPZE', 'jWbgOJ', 'jWExyq', 'eJGpQx', 'NxyVZJ', 'adOzra', 'eJWyqy', 'YwWeaj', 'OMNJPN', 'JGogQe']
-
-      document.addEventListener("DOMContentLoaded", function(event) {
-        var carousel = document.getElementById('carousel'),
-            index = codepenUrls.length,
-            currentElement;
-
-        while(index--) {
-          ajax('http://codepen.io/api/oembed?url=https://codepen.io/MikitaLisavets/pen/' + codepenUrls[index]  + '&format=json&height=600', function(response) {
-            currentElement = document.createElement("DIV");
-            currentElement.className = 'carousel__item';
-            currentElement.innerHTML = response.html;
-            carousel.appendChild(currentElement);
-          });
-        }
-
-      });
-
-      function ajax(url, cb, ecb) {
-        var request = new XMLHttpRequest();
-        request.withCredentials = true;
-        request.open('GET', url, true);
-        request.onload = function() {
-          if (request.status >= 200 && request.status < 400) {
-            if (cb) cb(JSON.parse(request.response));
-          } else {
-            if (ecb) ecb(request);
-          }
-        };
-        request.onerror = function() {
-            if (ecb) ecb();
-        };
-        request.send();
-      }
-
       function toggle() {
         var self = document.querySelector('.avatar'),
             selfcn = self.className,
