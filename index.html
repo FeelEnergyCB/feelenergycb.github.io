@@ -433,25 +433,12 @@
         </div> <!-- end info-wrapper -->
 
       </div> <!-- end main -->
+      <div class="typewriter"></div> <!-- end typewriter -->
     </div> <!-- end wrapper -->
 
     <script>
       function toggle() {
-        var self = document.querySelector('.avatar'),
-            selfcn = self.className,
-            tabs = document.querySelector('.tags'),
-            cn = tabs.className;
-
-        if (cn.indexOf('tags_active') > 0) {
-          tabs.className = cn.replace(/ tags_active/g, "");
-        } else {
-          tabs.className += ' tags_active';
-        }
-        if (selfcn.indexOf('avatar_active') > 0) {
-          self.className = selfcn.replace(/ avatar_active/g, "");
-        } else {
-          self.className += ' avatar_active';
-        }
+        document.body.classList.toggle('fun')
       }
     </script>
     <!-- Yandex.Metrika counter --><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter31493368 = new Ya.Metrika({ id:31493368, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><!-- /Yandex.Metrika counter -->

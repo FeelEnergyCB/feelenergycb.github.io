@@ -164,8 +164,20 @@
   }
 }
 
+.max-h(@med, @rules){
+  @media (max-height: @med) {
+    @rules();
+  }
+}
+
 .min(@med, @rules){
   @media (min-width: @med) {
+    @rules();
+  }
+}
+
+.min-h(@med, @rules){
+  @media (min-height: @med) {
     @rules();
   }
 }
