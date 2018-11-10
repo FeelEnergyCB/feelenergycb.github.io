@@ -40,6 +40,21 @@
   }
 }
 
+@keyframes avatar-pic {
+  0%, 100% {
+    box-shadow: 3px 3px 4px @color-glow;
+  }
+  25% {
+    box-shadow: 3px -3px 4px @color-glow;
+  }
+  50% {
+    box-shadow: -3px -3px 4px @color-glow;
+  }
+  75% {
+    box-shadow: -3px 3px 4px @color-glow;
+  }
+}
+
 @keyframes title {
   0% {
     margin-top: -135px;
@@ -148,7 +163,6 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  overflow: hidden;
   z-index: 10;
   pointer-events: all;
   box-shadow: 0 3px 6px rgba(0,0,0,.16),
@@ -165,6 +179,11 @@
     display: block;
     border-radius: 50%;
     background: @color-white;
+    transform: translate3d(0, 0, 0);
+    animation: avatar-pic @animation-time * 4 linear forwards infinite;
+    .fun & {
+      animation: none;
+    }
   }
   &__wrapper {
     position: absolute;
