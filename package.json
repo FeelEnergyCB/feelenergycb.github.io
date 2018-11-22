@@ -2,7 +2,8 @@
   "name": "mikitalisavets.github.io",
   "version": "1.0.0",
   "scripts": {
-    "less": "./node_modules/less/bin/lessc ./less/style.less ./css/style.min.css --compress"
+    "less": "./node_modules/less/bin/lessc ./less/style.less ./css/style.min.css --compress",
+    "less-w": "node .\\node_modules\\less\\bin\\lessc .\\less\\style.less .\\css\\style.min.css --compress"
   },
   "author": "Mikita Lisavets",
   "license": "ISC",
