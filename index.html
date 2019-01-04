@@ -384,22 +384,26 @@
     </div> <!-- end wrapper -->
 
     <script>
-      function toggle() { document.body.classList.toggle('fun') }
-
-      const carousel = document.getElementById('carousel')
-      let count = 0
-      let forward = true
-      const interval = setInterval(() => {
-        carousel.scrollLeft = forward ? ++count : --count
-        if (count > carousel.scrollLeft) forward = false
-        else if (count < carousel.scrollLeft) forward = true
-      }, 16)
-
-      document.addEventListener('click', function _listener() {
+      const carousel = document.getElementById('carousel');
+      let intervalId;
+      function toggle() { document.body.classList.toggle('fun') };
+      function startCarousel() {
+        let count = 0;
+        let forward = true;
+        intervalId = setInterval(() => {
+          carousel.scrollLeft = forward ? ++count : --count;
+          if (count > carousel.scrollLeft) forward = false
+          else if (count < carousel.scrollLeft) forward = true
+        }, 16);
+      };
+      function stopCarousel() {
         carousel.classList.remove('auto')
-        clearInterval(interval)
-        document.removeEventListener('click', _listener)
-      })
+        clearInterval(intervalId)
+        document.removeEventListener('click', stopCarousel)
+      };
+      
+      startCarousel()
+      document.addEventListener('click', stopCarousel)
     </script>
     <!-- Yandex.Metrika counter --><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter31493368 = new Ya.Metrika({ id:31493368, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><!-- /Yandex.Metrika counter -->
   </body>
