@@ -240,6 +240,26 @@
       });
     }
   }
+  &__box {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+  }
+  &__box-option {
+    transition: transform .3s ease-in-out;
+    transform: rotateX(90deg);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    &_visible {
+      position: relative;
+      opacity: 1;
+      transform: rotateX(0deg);
+    }
+  }
 } // end title
 
 .sub-title {
