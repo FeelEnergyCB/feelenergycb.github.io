@@ -1,0 +1,25 @@
+name: GitHub Pages deploy
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  checkout-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Npm Install
+      run:  npm install
+    - name: Build
+      run:  npm run build
+    - name: Deploy to GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v1
+      with:
+        target_branch: gh-pages
+        build_dir: public
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
