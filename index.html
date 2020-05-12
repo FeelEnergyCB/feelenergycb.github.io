@@ -446,26 +446,36 @@
     </div> <!-- end wrapper -->
 
     <script>
+      function toggle() { document.body.classList.toggle('fun') };
+    </script>
+
+    <script>
       const carousel = document.getElementById('carousel');
+      let count = 0;
+      let forward = true;
+      let requestId;
+
+      function animateCarousel() {
+        carousel.scrollLeft = forward ? ++count : --count;
+        if (count > carousel.scrollLeft) forward = false
+        else if (count < carousel.scrollLeft) forward = true
+
+        requestId = requestAnimationFrame(animateCarousel);
+      };
+
+      function stopCarousel() {
+        document.removeEventListener('click', stopCarousel);
+        carousel.classList.remove('auto');
+        cancelAnimationFrame(requestId);
+      };
+
+      animateCarousel();
+      document.addEventListener('click', stopCarousel);
+    </script>
+
+    <script>
       const titleCarousel = document.getElementById('title-carousel');
 
-      let intervalId;
-
-      function toggle() { document.body.classList.toggle('fun') };
-      function startCarousel() {
-        let count = 0;
-        let forward = true;
-        intervalId = setInterval(() => {
-          carousel.scrollLeft = forward ? ++count : --count;
-          if (count > carousel.scrollLeft) forward = false
-          else if (count < carousel.scrollLeft) forward = true
-        }, 16);
-      };
-      function stopCarousel() {
-        carousel.classList.remove('auto')
-        clearInterval(intervalId)
-        document.removeEventListener('click', stopCarousel)
-      };
       function startTitleCarousel() {
         const activeElementClassName = 'title__box-option_visible'
         setInterval(() => {
@@ -476,11 +486,9 @@
             titleCarousel.firstElementChild.classList.add(activeElementClassName)
           activeElement.classList.remove(activeElementClassName)
         }, 6000);
-      }
-      
-      startCarousel()
-      startTitleCarousel()
-      document.addEventListener('click', stopCarousel)
+      };
+
+      startTitleCarousel();
     </script>
     <!-- Yandex.Metrika counter --><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter31493368 = new Ya.Metrika({ id:31493368, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><!-- /Yandex.Metrika counter -->
   </body>
