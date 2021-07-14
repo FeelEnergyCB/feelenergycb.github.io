@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    _.---.._             _.---...__
+ .-'   /\   \          .'  /\     /
+ `.   (  )   \        /   (  )   /
+   `.  \/   .'\      /`.   \/  .'
+     ``---''   )    (   ``---''
+             .';.--.;`.
+           .' /_...._\ `.
+         .'   `.a  a.'   `.
+        (        \/        )
+         `.___..-'`-..___.'
+            \          /
+             `-.____.-'
+-->
+<head>
+  <title>Mikita Lisavets</title>
+  <meta charset="UTF-8">
+  <meta name="Description" content="Frontend developer">
+  <meta name="Keywords" content="Frontend, Front-end, Front end,Фронтэнд, Developer, Разработчик, html, css, javascript, react">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <style>
+    body {
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+    }
+    body.loaded {
+      opacity: 1;
+    }
+    #canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      outline: none;
+
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="100%" height="100%"></canvas>
+  <ul id="menu" class="menu">
+    <li><a data-to="main" class="js-glitch">_main</a></li>
+    <li><a data-to="about" class="js-glitch">about_me</a></li>
+    <li><a data-to="projects" class="js-glitch">my_projects</a></li>
+    <li><a data-to="contacts" class="js-glitch">contacts_</a></li>
+  </ul>
+  <section id="main" class="section main">
+    <div class="center">
+      <h1 class="title js-glitch">MIKITA LISAVETS</h1>
+      <h2 class="title js-glitch">FRONTEND DEVELOPER</h2>
+    </div>
+  </section>
+  <section id="about" class="section about">
+    <h2 class="title js-glitch">About</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora repellat asperiores ea, aperiam iure, inventore debitis pariatur eveniet possimus dolor incidunt eos molestias. Dolorem ea labore soluta, officia ipsa magni molestias impedit, asperiores accusamus aperiam obcaecati eum corporis cum suscipit incidunt est nemo perferendis dolore cumque sed repudiandae? Beatae necessitatibus magni, quaerat distinctio pariatur suscipit ducimus eum dolorem impedit quasi, maiores maxime saepe ipsam vel sed fugiat natus eveniet. Ex repellat ab iusto quia ad, libero illo exercitationem facere, accusamus facilis eaque consectetur repudiandae? Fuga quidem eius nulla autem nemo quae repellendus dolor omnis eveniet porro. Amet iure id porro?</p>
+  </section>
+  <section id="projects" class="section projects">
+    <h2 class="title js-glitch">Projects</h2>
+    <p>My projects:</p>
+    <ul>
+      <li>
+        <a href="https://github.com/MikitaLisavets/light-select" target="_blank">lightSelect</a>
+        <p>
+          Customization of default select element
+        </p>
+      </li>
+      <li>
+        <a href="https://github.com/MikitaLisavets/light-file" target="_blank">lightFile</a>
+        <p>
+          Customization of default input[type="file"]
+        </p>
+      </li>
+      <li>
+        <a href="https://github.com/MikitaLisavets/light-split" target="_blank">lightSplit</a>
+        <p>
+          Transformation of the list into columns
+        </p>
+      </li>
+      <li>
+        <a href="https://github.com/MikitaLisavets/minimal-blog" target="_blank">MinimalBlog</a>
+        <p>
+          Simple blog platform (AngularJS / Markdown)
+        </p>
+      </li>
+      <li>
+        <a href="https://mikitalisavets.me/world-flags" target="_blank">World Flags</a>
+        <p>
+          Fun With Flags ;)
+        </p>
+      </li>
+      <li>
+        <a href="http://mikitalisavets.me/random" target="_blank">Random sample search</a>
+        <p>
+          A random search of musical samples which are using CC-BY license
+        </p>
+      </li>
+      <li>
+        <a href="http://mikitalisavets.me/name-of-color" target="_blank">Color name generator</a>
+        <p>
+          The generator of color names by HEX or RGB values
+        </p>
+      </li>
+      <li>
+        <a href="http://mikitalisavets.me/autoplay" target="_blank">Instagram Autoplay</a>
+        <p>
+          Search and autoplay Instagram videos by hashtags
+        </p>
+      </li>
+    </ul>
+  </section>
+  <section id="contacts" class="section contacts">
+    <h2 class="title js-glitch">Contacts</h2>
+    <p>My contacts:</p>
+    <div class="info contacts info_sm">
+
+      <div class="contacts__row">
+        <div class="info__title contacts__item">
+        <span class="contacts__title">
+          LinkedIn:
+        </span>
+        </div> <!-- end info__title -->
+        <div class="info__content contacts__item">
+          <a href="https://www.linkedin.com/in/mikitalisavets" target="_blank" class="contacts__link link">linkedIn:MikitaLisavets</a>
+        </div> <!-- end info__content -->
+      </div> <!-- end contacts__row -->
+
+      <div class="contacts__row">
+        <div class="info__title contacts__item">
+        <span class="contacts__title">
+          Blog:
+        </span>
+        </div> <!-- end info__title -->
+        <div class="info__content contacts__item">
+          <a href="http://mikitalisavets.me/blog" target="_blank" class="contacts__link link">blog:MikitaLisavets</a>
+        </div> <!-- end info__content -->
+      </div> <!-- end contacts__row -->
+
+      <div class="contacts__row">
+        <div class="info__title contacts__item">
+        <span class="contacts__title">
+          Github:
+        </span>
+        </div> <!-- end info__title -->
+        <div class="info__content contacts__item">
+          <a href="https://github.com/MikitaLisavets" target="_blank" class="contacts__link link">github:MikitaLisavets</a>
+        </div> <!-- end info__content -->
+      </div> <!-- end contacts__row -->
+
+      <div class="contacts__row">
+        <div class="info__title contacts__item">
+        <span class="contacts__title">
+          Codepen:
+        </span>
+        </div> <!-- end info__title -->
+        <div class="info__content contacts__item">
+          <a href="http://codepen.io/MikitaLisavets/" target="_blank" class="contacts__link link">codepen:MikitaLisavets</a>
+        </div> <!-- end info__content -->
+      </div> <!-- end contacts__row -->
+
+      <div class="contacts__row">
+        <div class="info__title contacts__item">
+        <span class="contacts__title">
+          Twitter:
+        </span>
+        </div> <!-- end info__title -->
+        <div class="info__content contacts__item">
+          <a href="https://twitter.com/MikitaLisavets" target="_blank" class="contacts__link link">@MikitaLisavets</a>
+        </div> <!-- end info__content -->
+      </div> <!-- end contacts__row -->
+      
+      <div class="contacts__row">
+        <div class="info__title contacts__item">
+        <span class="contacts__title">
+          Instagram:
+        </span>
+        </div> <!-- end info__title -->
+        <div class="info__content contacts__item">
+          <a href="https://instagram.com/mikiilis" target="_blank" class="contacts__link link">@mikiilis</a>
+        </div> <!-- end info__content -->
+      </div> <!-- end contacts__row -->
+        
+      <div class="contacts__row">
+        <div class="info__title contacts__item">
+        <span class="contacts__title">
+          Email:
+        </span>
+        </div> <!-- end info__title -->
+        <div class="info__content contacts__item">
+          <a href="mailto:mikita.lisavets@gmail.com" class="contacts__link link">mikita.lisavets@gmail.com</a>
+        </div> <!-- end info__content -->
+      </div> <!-- end contacts__row -->
+
+      <div class="contacts__row">
+        <div class="info__title contacts__item">
+        <span class="contacts__title">
+          Skype:
+        </span>
+        </div> <!-- end info__title -->
+        <div class="info__content contacts__item">
+          <a href="skype:mikita.lisavets" class="contacts__link link">mikita.lisavets</a>
+        </div> <!-- end info__content -->
+      </div> <!-- end contacts__row -->
+
+      <div class="contacts__row">
+        <div class="info__title contacts__item">
+        <span class="contacts__title">
+          Printable CV:
+        </span>
+        </div> <!-- end info__title -->
+        <div class="info__content contacts__item">
+          <a href="https://docs.google.com/document/d/14ILYnRVTmufWJstZ-v26-SrmMmrufOvPCMucmpHFCsg" target="_blank" class="contacts__link link">CV</a>
+        </div> <!-- end info__content -->
+      </div> <!-- end contacts__row -->
+        
+    </div> <!-- end info -->
+  </section>
+</body>
+</html>

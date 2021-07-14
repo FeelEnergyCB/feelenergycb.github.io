@@ -1,12 +1,31 @@
 {
-  "name": "mikitalisavets.github.io",
+  "name": "babylonjs-test",
   "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/MikitaLisavets/bsbylonjs-test.git",
+  "author": "Mikita Lisavets <mikita.lisavets@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "build": "node_modules/less/bin/lessc src/less/style.less style.min.css --compress"
+    "build": "webpack",
+    "start": "webpack serve --open"
   },
-  "author": "Mikita Lisavets",
-  "license": "ISC",
+  "dependencies": {
+    "babylonjs": "^5.0.0-alpha.30",
+    "babylonjs-post-process": "^5.0.0-alpha.30"
+  },
   "devDependencies": {
-    "less": "^3.11.1"
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^5.2.6",
+    "html-webpack-plugin": "^5.3.2",
+    "path": "^0.12.7",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.0.0",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.4",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   }
 }
