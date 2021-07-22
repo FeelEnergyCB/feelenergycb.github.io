@@ -1,5 +1,5 @@
 import { glitchText } from "./glitchText";
-import def from "./engine";
+// import def from "./engine";  
 import "./index.scss"
 
 const prepareGlitchText = () => {
@@ -62,9 +62,9 @@ document.addEventListener("DOMContentLoaded", () => {
   //   embedMode: true,
   // });
 
-  def.engine.runRenderLoop( () => {
-    def.scene.render();
-  })
+  // def.engine.runRenderLoop( () => {
+  //   def.scene.render();
+  // })
 
   // window.addEventListener('resize', () => {
   //   def.engine.resize();
